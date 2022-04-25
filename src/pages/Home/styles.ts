@@ -17,15 +17,21 @@ export const Title = styled.h1`
 `;
 
 export const MainContainer = styled.main`
-  width: 100%;
-  height: 100%;
+  ${({ theme }) => css`
+    width: 100%;
+    height: 100%;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-  padding: 0 10px;
+    padding: 0 10px;
+
+    @media ${theme.media.gtSmall} {
+      padding: 0 20px;
+    }
+  `}
 `;
 
 export const TitleAndButton = styled.div`

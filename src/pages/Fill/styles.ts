@@ -44,6 +44,10 @@ export const InputsContainer = styled.div`
   gap: 8px;
 `;
 
+export const Anchor = styled.a`
+  width: 100%;
+`;
+
 export const ActionButtonsContainer = styled.div`
   ${({ theme }) => css`
     width: 100%;

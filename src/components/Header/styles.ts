@@ -16,4 +16,8 @@ export const Wrapper = styled.header`
   `}
 `;
 
-export const Title = styled.h1``;
+export const Title = styled.h1`
+  ${({ theme }) => css`
+    color: ${theme.colors.white};
+  `}
+`;

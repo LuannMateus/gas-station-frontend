@@ -18,4 +18,8 @@ export const GlobalStyles = createGlobalStyle`
 
     font-family: 'Montserrat', sans-serif;
   }
+
+  a {
+    text-decoration: none;
+  }
 `;

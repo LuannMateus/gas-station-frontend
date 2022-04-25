@@ -8,24 +8,24 @@ import {
   XAxis,
   YAxis,
 } from 'recharts';
+import { Tank } from '../../models/Tank';
+import { formatFloat } from '../../utils/formatFloat';
 import * as Styled from './styles';
 
-export const BarChart = () => {
-  const data = [
-    {
-      name: 'Gasolina',
-      tank: 30000,
-    },
-    {
-      name: 'Diesel',
-      tank: 2000,
-    },
-  ];
+export type BarChartProps = {
+  data: Tank[];
+};
+
+export const BarChart = ({ data }: BarChartProps) => {
+  const chartData = data.map((tank) => ({
+    name: tank.type,
+    tank: formatFloat(tank.currentFuel),
+  }));
 
   return (
     <Styled.Wrapper>
       <ResponsiveContainer width="100%" height="100%">
-        <Chart data={data}>
+        <Chart data={chartData}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" />
           <YAxis />
