@@ -108,7 +108,12 @@ export default function Fill() {
     <Styled.Wrapper>
       <Header />
       <Styled.MainContainer>
-        <Styled.Title>Cadastro de Novo Abastecimento</Styled.Title>
+        {id ? (
+          <Styled.Title>Editar Abastecimento</Styled.Title>
+        ) : (
+          <Styled.Title>Cadastro de Novo Abastecimento</Styled.Title>
+        )}
+
         <Styled.InputsContainer>
           <Input
             label="Valor"

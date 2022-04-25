@@ -19,7 +19,7 @@ export type BarChartProps = {
 export const BarChart = ({ data }: BarChartProps) => {
   const chartData = data.map((tank) => ({
     name: tank.type,
-    tank: formatFloat(tank.currentFuel),
+    tanque: formatFloat(tank.currentFuel),
   }));
 
   return (
@@ -31,7 +31,7 @@ export const BarChart = ({ data }: BarChartProps) => {
           <YAxis />
           <Tooltip />
           <Legend />
-          <Bar dataKey="tank" fill="#f2b108" />
+          <Bar dataKey="tanque" fill="#f2b108" />
         </Chart>
       </ResponsiveContainer>
     </Styled.Wrapper>
